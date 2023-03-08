@@ -9,6 +9,7 @@ public:
 	}
 
 	void Run();
+	void Update();
 
 	void Shutdown();
 private:

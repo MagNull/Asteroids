@@ -22,6 +22,7 @@ public:
 
 private:
 	bool m_IsRun;
+	std::unique_ptr<GameObject> m_ship;
 	std::unique_ptr<GameObjectFactory> m_gameObjectFactory;
 	std::unique_ptr<World> m_World;
 	std::unique_ptr<Graphics> m_Gfx;

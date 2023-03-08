@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include "GameObject.h"
 
+class GameObject;
+
 class Component
 {
 public:
@@ -13,6 +15,6 @@ public:
 		return *m_owner;
 	}
 
-private:
+protected:
 	GameObject* const m_owner;
 };

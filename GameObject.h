@@ -43,7 +43,7 @@ public:
 	}
 
 	template <typename ComponentT>
-	bool GetComponent(ComponentT* out)
+	bool GetComponent(ComponentT* out) const
 	{
 		for (Component* component : m_components)
 		{

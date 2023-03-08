@@ -26,6 +26,21 @@ Vector2 Vector2::operator-=(Vector2 v1)
 	return *this;
 }
 
+Vector2 Vector2::Loop(Vector2 vector, Vector2 min, Vector2 max)
+{
+	 if (vector.x < min.x)
+		vector.x = max.x;
+	else if (vector.x > max.x)
+		vector.x = min.x;
+
+	if (vector.y < min.y)
+		vector.y = max.y;
+	else if (vector.y > max.y)
+		vector.y = min.y;
+
+	return vector;
+}
+
 double Vector2::GetMagnitude() const
 {
 	return sqrt(x * x + y * y);
