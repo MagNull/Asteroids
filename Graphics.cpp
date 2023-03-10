@@ -3,7 +3,9 @@
 #include <iostream>
 #include <SDL_image.h>
 
+#include "RenderComponent.h"
 #include "Screen.h"
+#include "Texture.h"
 
 
 Graphics::Graphics(int width, int height) : m_width(width), m_height(height)
@@ -58,14 +60,20 @@ void Graphics::Render(std::vector<GameObject*> gameObjects)
 	SDL_RenderClear(m_Renderer);
 	for (GameObject* gameObject : gameObjects)
 	{
+		RenderComponent* renderComp = nullptr;
+		if (!gameObject->GetComponent<RenderComponent>(&renderComp))
+			continue;
+
 		auto transform = gameObject->GetTransform();
 
 		Vector2 fromWorldToScreenPos = Screen::ConvertToScreenPos(transform.GetPosition());
-		std::cout << transform.GetForward().x << " " << transform.GetForward().y << '\n';
+		auto drawRect = transform.GetRect();
+		drawRect.x = fromWorldToScreenPos.x;
+		drawRect.y = fromWorldToScreenPos.y;
 
-
-		gameObject->GetRenderData().Texture->Render(fromWorldToScreenPos.x, fromWorldToScreenPos.y, m_Renderer, nullptr,
-		                                            transform.GetRotation(), nullptr, SDL_FLIP_NONE);
+		renderComp->GetTexture().Render(drawRect,
+		                                m_Renderer, nullptr, transform.GetRotation(), nullptr,
+		                                SDL_FLIP_NONE);
 	}
 	SDL_RenderPresent(m_Renderer);
 }

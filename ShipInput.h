@@ -9,7 +9,7 @@ public:
 	}
 
 	void Run();
-	void Update();
+	void Update(double deltaTime);
 
 	void Shutdown();
 private:

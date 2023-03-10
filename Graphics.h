@@ -3,6 +3,7 @@
 #include <SDL.h>
 
 #include "GameObject.h"
+#include "Texture.h"
 
 class Graphics
 {

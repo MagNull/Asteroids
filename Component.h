@@ -1,6 +1,4 @@
 ﻿#pragma once
-#include "GameObject.h"
-
 class GameObject;
 
 class Component
@@ -13,6 +11,11 @@ public:
 	GameObject& GetGameObject()
 	{
 		return *m_owner;
+	}
+
+	virtual void Update(double deltaTime)
+	{
+		
 	}
 
 protected:

@@ -9,6 +9,13 @@ Texture::Texture() : m_texture(nullptr), m_width(0), m_height(0)
 {
 }
 
+Texture::Texture(const Texture& texture)
+{
+	m_texture = texture.m_texture;
+	m_width = texture.m_width;
+	m_height = texture.m_height;
+}
+
 Texture::Texture(std::string textureText, std::string fontPath, SDL_Color color, SDL_Renderer* renderer)
 {
 	LoadFromText(textureText, fontPath, renderer, color);
@@ -24,10 +31,12 @@ Texture::~Texture()
 	Free();
 }
 
-void Texture::Render(int x, int y, SDL_Renderer* renderer, SDL_Rect* clip,
-                     double angle, SDL_Point* center, SDL_RendererFlip flip) const
+void Texture::Render(SDL_Rect drawRect,
+                     SDL_Renderer* renderer, SDL_Rect* clip, double angle, SDL_Point* center,
+                     SDL_RendererFlip flip) const
 {
-	SDL_Rect drawRect = {x, y, m_width, m_height};
+	drawRect.w *= m_width;
+	drawRect.h *= m_height;
 	if (clip != nullptr)
 	{
 		drawRect.w = clip->w;

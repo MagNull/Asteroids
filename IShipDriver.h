@@ -2,6 +2,6 @@
 class IShipDriver
 {
 public:
-	virtual void Accelerate() = 0;
-	virtual void Yaw(bool clockwise) = 0;
+	virtual void Accelerate(double deltaTime) = 0;
+	virtual void Yaw(double deltaTime, bool clockwise) = 0;
 };

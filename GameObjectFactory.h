@@ -1,7 +1,6 @@
 #pragma once
-#include <memory>
-#include "GameObject.h"
 #include "World.h"
+#include "Vector2.h"
 
 class GameObjectFactory
 {
@@ -12,7 +11,7 @@ public:
 
 	~GameObjectFactory();
 
-	GameObject& Create(std::string name, Texture* texture, Vector2 pos = Vector2::zero);
+	GameObject& Create(std::string name, Vector2 pos = Vector2::zero) const;
 
 private:
 	World* m_World;

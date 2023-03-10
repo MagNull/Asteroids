@@ -1,15 +1,15 @@
 #include "GameObjectFactory.h"
 
-#include "Ship.h"
+#include "ShipComponent.h"
 
 GameObjectFactory::~GameObjectFactory()
 {
 	m_World = nullptr;
 }
 
-GameObject& GameObjectFactory::Create(std::string name, Texture* texture, Vector2 pos)
+GameObject& GameObjectFactory::Create(std::string name, Vector2 pos) const
 {
-	GameObject* newGO = new GameObject(name, pos, RenderData{texture, 0});
+	GameObject* newGO = new GameObject(name, pos);
 	m_World->AddGameObject(newGO);
 
 	return *newGO;
