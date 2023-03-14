@@ -1,5 +1,6 @@
 ﻿#include "Graphics.h"
 
+#include <algorithm>
 #include <iostream>
 #include <SDL_image.h>
 
@@ -58,8 +59,23 @@ Graphics::~Graphics()
 void Graphics::Render(std::vector<GameObject*> gameObjects)
 {
 	SDL_RenderClear(m_Renderer);
+	std::sort(gameObjects.begin(), gameObjects.end(), [](GameObject* one, GameObject* second)
+	{
+		RenderComponent* render1;
+		if(one->GetComponent<RenderComponent>(&render1))
+			return false;
+
+		RenderComponent* render2;
+		if(second->GetComponent<RenderComponent>(&render2))
+			return false;
+
+		return render1->GetDrawOrder() > render2->GetDrawOrder();
+	});
 	for (GameObject* gameObject : gameObjects)
 	{
+		if (!gameObject->IsActive())
+			continue;
+
 		RenderComponent* renderComp = nullptr;
 		if (!gameObject->GetComponent<RenderComponent>(&renderComp))
 			continue;
@@ -81,4 +97,9 @@ void Graphics::Render(std::vector<GameObject*> gameObjects)
 Texture& Graphics::CreateTexture(std::string path) const
 {
 	return *new Texture(path, m_Renderer);
+}
+
+void Graphics::Clear() const
+{
+	SDL_RenderClear(m_Renderer);
 }

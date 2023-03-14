@@ -11,6 +11,7 @@ public:
 
 	void AddGameObject(GameObject* gameObject);
 	void DestroyGameObject(GameObject* gameObject);
+	void Clear();
 
 	const std::vector<GameObject*> GetGameObjects() const
 	{

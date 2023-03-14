@@ -14,6 +14,11 @@ void World::DestroyGameObject(GameObject* gameObject)
 
 }
 
+void World::Clear()
+{
+	m_gameObjects.clear();
+}
+
 World::~World()
 {
 	for (auto object : m_gameObjects)

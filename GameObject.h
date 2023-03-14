@@ -22,9 +22,24 @@ public:
 		return m_Name;
 	}
 
+	void SetActive(bool value)
+	{
+		m_isActive = value;
+	}
+
+	bool IsActive() const
+	{
+		return m_isActive;
+	}
+
 	void Update(double deltaTime);
 
 	void AddComponent(Component* component);
+
+	std::vector<Component*> GetComponents() const
+	{
+		return m_Components;
+	}
 
 	template <typename ComponentT>
 	void AddComponent()
@@ -48,6 +63,20 @@ public:
 
 		return false;
 	}
+	template <typename ComponentT>
+	ComponentT* GetComponent() const
+	{
+		for (Component* component : m_Components)
+		{
+			ComponentT* castedComponent = dynamic_cast<ComponentT*>(component);
+			if (castedComponent != nullptr)
+			{
+				return castedComponent;
+			}
+		}
+
+		return nullptr;
+	}
 
 private:
 	GameObject(std::string name, Vector2 pos = Vector2::zero) : m_Name(name), m_Transform(Transform{pos})
@@ -61,4 +90,5 @@ private:
 	std::vector<Component*> m_Components;
 	std::string m_Name;
 	Transform m_Transform;
+	bool m_isActive = true;
 };

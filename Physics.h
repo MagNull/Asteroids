@@ -1,5 +1,7 @@
 ﻿#pragma once
 #include <vector>
+
+#include "ColliderComponent.h"
 #include "GameObject.h"
 
 class PhysicComponent;
@@ -14,7 +16,7 @@ public:
 
 	void Update(std::vector<GameObject*> physics, double deltaTime);
 private:
-	void CheckCollisions(std::vector<PhysicComponent*> physics);
-	bool CheckCollision(PhysicComponent* physic1, PhysicComponent* physic2) const;
+	void CheckCollisions(std::vector<ColliderComponent*> colliders);
+	bool CheckCollision(ColliderComponent* obj1, ColliderComponent* obj2) const;
 	void ProcessVelocities(std::vector<PhysicComponent*> physics, double deltaTime);
 };

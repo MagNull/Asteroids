@@ -11,12 +11,12 @@ public:
 	Texture(std::string textureText, std::string fontPath, SDL_Color color, SDL_Renderer* renderer);
 	~Texture();
 
-	int Width() const
+	int GetWidth() const
 	{
 		return m_width;
 	}
 
-	int Height() const
+	int GetHeight() const
 	{
 		return m_height;
 	}

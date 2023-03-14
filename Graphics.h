@@ -14,6 +14,7 @@ public:
 	void Init();
 	void Render(std::vector<GameObject*> gameObjects);
 	Texture& CreateTexture(std::string path) const;
+	void Clear() const;
 	void Shutdown() const;
 
 private:

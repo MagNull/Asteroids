@@ -4,13 +4,13 @@ class GameObject;
 class Component
 {
 public:
-	Component(GameObject& owner) : m_owner(&owner)
+	Component(GameObject& owner) : m_Owner(&owner)
 	{
 	}
 
 	GameObject& GetGameObject()
 	{
-		return *m_owner;
+		return *m_Owner;
 	}
 
 	virtual void Update(double deltaTime)
@@ -18,6 +18,11 @@ public:
 		
 	}
 
+	virtual void OnCollided(GameObject* other)
+	{
+		
+	}
+
 protected:
-	GameObject* const m_owner;
+	GameObject* const m_Owner;
 };

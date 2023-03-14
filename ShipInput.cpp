@@ -1,8 +1,12 @@
 #include "ShipInput.h"
 
-#include <iostream>
-#include <ostream>
 #include <SDL.h>
+
+void ShipInput::SetShip(IShipDriver& shipDriver, ShipShooterComponent& shooter)
+{
+	m_ShipDriver = &shipDriver;
+	m_ShipShooter = &shooter;
+}
 
 void ShipInput::Run()
 {
@@ -12,17 +16,21 @@ void ShipInput::Run()
 void ShipInput::Update(double deltaTime)
 {
 	const Uint8* keyStates = SDL_GetKeyboardState(nullptr);
-	if (keyStates[SDL_SCANCODE_SPACE])
+	if (keyStates[SDL_SCANCODE_LSHIFT])
 	{
-		m_shipDriver->Accelerate(deltaTime);
+		m_ShipDriver->Accelerate(deltaTime);
 	}
-	if (keyStates[SDL_SCANCODE_R])
+	if (keyStates[SDL_SCANCODE_E])
 	{
-		m_shipDriver->Yaw(deltaTime, true);
+		m_ShipDriver->Yaw(deltaTime, true);
 	}
 	if (keyStates[SDL_SCANCODE_Q])
 	{
-		m_shipDriver->Yaw(deltaTime, false);
+		m_ShipDriver->Yaw(deltaTime, false);
+	}
+	if(keyStates[SDL_SCANCODE_SPACE])
+	{
+		m_ShipShooter->Shoot();
 	}
 }
 

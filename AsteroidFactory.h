@@ -3,24 +3,18 @@
 #include "PhysicComponent.h"
 #include "RenderComponent.h"
 
-enum EnemyType
-{
-	Asteroid,
-	BigAsteroid,
-	UFO
-};
 
-class EnemyFactory
+class AsteroidFactory
 {
 public:
-	EnemyFactory(GameObjectFactory& gameObjectFactory, Texture& asteroidTexture,
+	AsteroidFactory(GameObjectFactory& gameObjectFactory, Texture& asteroidTexture,
 	             Texture& ufoTexture)
 		: m_GameObjectFactory(&gameObjectFactory), m_AsteroidTexture(&asteroidTexture),
 		  m_UfoTexture(&ufoTexture)
 	{
 	}
 
-	GameObject& Create(EnemyType type);
+	GameObject& Create();
 
 private:
 	GameObjectFactory* m_GameObjectFactory;

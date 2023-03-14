@@ -1,4 +1,5 @@
 ﻿#pragma once
+
 #include "Component.h"
 #include "Vector2.h"
 
@@ -30,14 +31,7 @@ public:
 		return m_AngleVelocity;
 	}
 
-	void OnCollided(GameObject* other);
-
 private:
 	Vector2 m_Velocity;
 	double m_AngleVelocity = 0.0;
 };
-
-inline void PhysicComponent::OnCollided(GameObject* other)
-{
-
-}

@@ -134,19 +134,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyFactory.cpp" />
-    <ClCompile Include="EnemySpawnerComponent.cpp" />
+    <ClCompile Include="AsteroidComponent.cpp" />
+    <ClCompile Include="BulletComponent.cpp" />
+    <ClCompile Include="BulletFactory.cpp" />
+    <ClCompile Include="ColliderComponent.cpp" />
+    <ClCompile Include="DamageDealerComponent.cpp" />
+    <ClCompile Include="AsteroidFactory.cpp" />
+    <ClCompile Include="AsteroidSpawnerComponent.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectFactory.cpp" />
     <ClCompile Include="Graphics.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjectPool.cpp" />
     <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="PoolObject.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="RenderComponent.cpp" />
     <ClCompile Include="Screen.cpp" />
     <ClCompile Include="ShipComponent.cpp" />
     <ClCompile Include="ShipInput.cpp" />
+    <ClCompile Include="ShipShooterComponent.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Transform.cpp" />
@@ -154,21 +162,30 @@
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AsteroidComponent.h" />
+    <ClInclude Include="BulletComponent.h" />
+    <ClInclude Include="BulletFactory.h" />
+    <ClInclude Include="ColliderComponent.h" />
     <ClInclude Include="Component.h" />
-    <ClInclude Include="EnemyFactory.h" />
-    <ClInclude Include="EnemySpawnerComponent.h" />
+    <ClInclude Include="DamageDealerComponent.h" />
+    <ClInclude Include="AsteroidFactory.h" />
+    <ClInclude Include="AsteroidSpawnerComponent.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectFactory.h" />
     <ClInclude Include="Graphics.h" />
+    <ClInclude Include="IDamageable.h" />
     <ClInclude Include="IShipDriver.h" />
+    <ClInclude Include="ObjectPool.h" />
     <ClInclude Include="PhysicComponent.h" />
     <ClInclude Include="Physics.h" />
+    <ClInclude Include="PoolObject.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="RenderComponent.h" />
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ShipComponent.h" />
     <ClInclude Include="ShipInput.h" />
+    <ClInclude Include="ShipShooterComponent.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Transform.h" />

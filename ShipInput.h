@@ -1,12 +1,15 @@
 #pragma once
 #include "IShipDriver.h"
+#include "ShipShooterComponent.h"
 
 class ShipInput
 {
 public:
-	ShipInput(IShipDriver& shipDriver) : m_shipDriver(&shipDriver)
+	ShipInput()
 	{
 	}
+
+	void SetShip(IShipDriver& shipDriver, ShipShooterComponent& shooter);
 
 	void Run();
 	void Update(double deltaTime);
@@ -14,5 +17,6 @@ public:
 	void Shutdown();
 private:
 	bool m_isRunning;
-	IShipDriver* m_shipDriver;
+	IShipDriver* m_ShipDriver;
+	ShipShooterComponent* m_ShipShooter;
 };

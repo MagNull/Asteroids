@@ -24,6 +24,8 @@ public:
 
 	void SetSize(Vector2 scale);
 
+	void SetForward(Vector2 newForward);
+
 	void Move(Vector2 pos);
 
 	void Rotate(double angle);
