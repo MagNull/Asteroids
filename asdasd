@@ -1,0 +1,29 @@
+[33mcommit bfe196d32df43b54d8e53c08521de404944e6e1d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: MagNull <pathfo@yandex.ru>
+Date:   Tue Mar 14 15:13:51 2023 +0500
+
+    Some fixes and reorganization of project
+
+[33mcommit 14dc6f5b8b5cd9880856e0fadc721ad722332aaa[m
+Author: MagNull <pathfo@yandex.ru>
+Date:   Tue Mar 14 14:35:05 2023 +0500
+
+    Finish
+
+[33mcommit d6df5cbf1dd34fc691f93ad776244e799671f756[m
+Author: MagNull <pathfo@yandex.ru>
+Date:   Fri Mar 10 17:36:41 2023 +0500
+
+    Implement asteroid spawn
+
+[33mcommit 5644a1c1a7c9bb7008410dfbfe15d3c44e9474c8[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: MagNull <pathfo@yandex.ru>
+Date:   Wed Mar 8 16:03:22 2023 +0500
+
+    Implement separate input
+
+[33mcommit db94b75232a7c670e26f6d31264e6ea599477ccf[m
+Author: MagNull <pathfo@yandex.ru>
+Date:   Wed Mar 8 15:21:14 2023 +0500
+
+    Init

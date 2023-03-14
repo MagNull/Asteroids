@@ -147,7 +147,6 @@
     <ClInclude Include="include\GameObject.h" />
     <ClInclude Include="include\GameObjectFactory.h" />
     <ClInclude Include="include\Graphics.h" />
-    <ClInclude Include="include\IDamageable.h" />
     <ClInclude Include="include\IShipDriver.h" />
     <ClInclude Include="include\ObjectPool.h" />
     <ClInclude Include="include\PhysicComponent.h" />
@@ -164,7 +163,6 @@
     <ClInclude Include="include\Transform.h" />
     <ClInclude Include="include\Vector2.h" />
     <ClInclude Include="include\World.h" />
-    <ClInclude Include="src\IDamageable.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="SPRITES\BULLET.png" />
