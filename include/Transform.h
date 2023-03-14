@@ -16,7 +16,7 @@ public:
 
 	Vector2 GetScale() const;
 
-	SDL_Rect GetRect() const;
+	SDL_FRect GetRect() const;
 
 	Vector2 GetForward() const;
 

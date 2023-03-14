@@ -109,12 +109,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>D:\VSProjects\SDL_Learn\SDL\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\VSProjects\SDL_Learn;D:\VSProjects\SDL_Learn\src;D:\VSProjects\SDL_Learn\SDL\include;D:\VSProjects\SDL_Learn\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\VSProjects\SDL_Learn;D:\VSProjects\SDL_Learn\include;D:\VSProjects\SDL_Learn\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,63 +135,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AsteroidComponent.cpp" />
-    <ClCompile Include="BulletComponent.cpp" />
-    <ClCompile Include="BulletFactory.cpp" />
-    <ClCompile Include="ColliderComponent.cpp" />
-    <ClCompile Include="DamageDealerComponent.cpp" />
-    <ClCompile Include="AsteroidFactory.cpp" />
-    <ClCompile Include="AsteroidSpawnerComponent.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GameObjectFactory.cpp" />
-    <ClCompile Include="Graphics.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ObjectPool.cpp" />
-    <ClCompile Include="Physics.cpp" />
-    <ClCompile Include="PoolObject.cpp" />
-    <ClCompile Include="Random.cpp" />
-    <ClCompile Include="RenderComponent.cpp" />
-    <ClCompile Include="Screen.cpp" />
-    <ClCompile Include="ShipComponent.cpp" />
-    <ClCompile Include="ShipInput.cpp" />
-    <ClCompile Include="ShipShooterComponent.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Transform.cpp" />
-    <ClCompile Include="Vector2.cpp" />
-    <ClCompile Include="World.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AsteroidComponent.h" />
-    <ClInclude Include="BulletComponent.h" />
-    <ClInclude Include="BulletFactory.h" />
-    <ClInclude Include="ColliderComponent.h" />
-    <ClInclude Include="Component.h" />
-    <ClInclude Include="DamageDealerComponent.h" />
-    <ClInclude Include="AsteroidFactory.h" />
-    <ClInclude Include="AsteroidSpawnerComponent.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GameObjectFactory.h" />
-    <ClInclude Include="Graphics.h" />
-    <ClInclude Include="IDamageable.h" />
-    <ClInclude Include="IShipDriver.h" />
-    <ClInclude Include="ObjectPool.h" />
-    <ClInclude Include="PhysicComponent.h" />
-    <ClInclude Include="Physics.h" />
-    <ClInclude Include="PoolObject.h" />
-    <ClInclude Include="Random.h" />
-    <ClInclude Include="RenderComponent.h" />
-    <ClInclude Include="Screen.h" />
-    <ClInclude Include="ShipComponent.h" />
-    <ClInclude Include="ShipInput.h" />
-    <ClInclude Include="ShipShooterComponent.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="Transform.h" />
-    <ClInclude Include="Vector2.h" />
-    <ClInclude Include="World.h" />
+    <ClInclude Include="include\AsteroidComponent.h" />
+    <ClInclude Include="include\AsteroidFactory.h" />
+    <ClInclude Include="include\AsteroidSpawnerComponent.h" />
+    <ClInclude Include="include\BulletComponent.h" />
+    <ClInclude Include="include\BulletFactory.h" />
+    <ClInclude Include="include\ColliderComponent.h" />
+    <ClInclude Include="include\Component.h" />
+    <ClInclude Include="include\DamageDealerComponent.h" />
+    <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\GameObject.h" />
+    <ClInclude Include="include\GameObjectFactory.h" />
+    <ClInclude Include="include\Graphics.h" />
+    <ClInclude Include="include\IDamageable.h" />
+    <ClInclude Include="include\IShipDriver.h" />
+    <ClInclude Include="include\ObjectPool.h" />
+    <ClInclude Include="include\PhysicComponent.h" />
+    <ClInclude Include="include\Physics.h" />
+    <ClInclude Include="include\PoolObject.h" />
+    <ClInclude Include="include\Random.h" />
+    <ClInclude Include="include\RenderComponent.h" />
+    <ClInclude Include="include\Screen.h" />
+    <ClInclude Include="include\ShipComponent.h" />
+    <ClInclude Include="include\ShipInput.h" />
+    <ClInclude Include="include\ShipShooterComponent.h" />
+    <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\Timer.h" />
+    <ClInclude Include="include\Transform.h" />
+    <ClInclude Include="include\Vector2.h" />
+    <ClInclude Include="include\World.h" />
+    <ClInclude Include="src\IDamageable.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="SPRITES\BULLET.png" />
@@ -201,6 +175,34 @@
     <Image Include="SPRITES\PLAYER.png" />
     <Image Include="SPRITES\ROCK.png" />
     <Image Include="SPRITES\SHIELD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AsteroidComponent.cpp" />
+    <ClCompile Include="src\AsteroidFactory.cpp" />
+    <ClCompile Include="src\AsteroidSpawnerComponent.cpp" />
+    <ClCompile Include="src\BulletComponent.cpp" />
+    <ClCompile Include="src\BulletFactory.cpp" />
+    <ClCompile Include="src\ColliderComponent.cpp" />
+    <ClCompile Include="src\DamageDealerComponent.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\GameObjectFactory.cpp" />
+    <ClCompile Include="src\Graphics.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ObjectPool.cpp" />
+    <ClCompile Include="src\Physics.cpp" />
+    <ClCompile Include="src\PoolObject.cpp" />
+    <ClCompile Include="src\Random.cpp" />
+    <ClCompile Include="src\RenderComponent.cpp" />
+    <ClCompile Include="src\Screen.cpp" />
+    <ClCompile Include="src\ShipComponent.cpp" />
+    <ClCompile Include="src\ShipInput.cpp" />
+    <ClCompile Include="src\ShipShooterComponent.cpp" />
+    <ClCompile Include="src\Texture.cpp" />
+    <ClCompile Include="src\Timer.cpp" />
+    <ClCompile Include="src\Transform.cpp" />
+    <ClCompile Include="src\Vector2.cpp" />
+    <ClCompile Include="src\World.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -31,8 +31,8 @@ Texture::~Texture()
 	Free();
 }
 
-void Texture::Render(SDL_Rect drawRect,
-                     SDL_Renderer* renderer, SDL_Rect* clip, double angle, SDL_Point* center,
+void Texture::Render(SDL_FRect drawRect,
+                     SDL_Renderer* renderer, SDL_Rect* clip, double angle, SDL_FPoint* center,
                      SDL_RendererFlip flip) const
 {
 	drawRect.w *= m_width;
@@ -43,7 +43,7 @@ void Texture::Render(SDL_Rect drawRect,
 		drawRect.h = clip->h;
 	}
 
-	SDL_RenderCopyEx(renderer, m_texture, clip, &drawRect, angle, center, flip);
+	SDL_RenderCopyExF(renderer, m_texture, clip, &drawRect, angle, center, flip);
 }
 
 

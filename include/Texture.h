@@ -21,8 +21,8 @@ public:
 		return m_height;
 	}
 
-	void Render(SDL_Rect drawRect,
-	            SDL_Renderer* renderer, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip) const;
+	void Render(SDL_FRect drawRect,
+	            SDL_Renderer* renderer, SDL_Rect* clip, double angle, SDL_FPoint* center, SDL_RendererFlip flip) const;
 
 	void SetColor(int8_t r, int8_t g, int8_t b) const;
 

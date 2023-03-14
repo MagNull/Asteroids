@@ -15,171 +15,94 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Physics.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObjectFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Screen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShipComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShipInput.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Timer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AsteroidSpawnerComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AsteroidFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Random.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ColliderComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DamageDealerComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AsteroidComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BulletComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ObjectPool.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PoolObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BulletFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShipShooterComponent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="include\Game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphics.h">
+    <ClInclude Include="include\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Physics.h">
+    <ClInclude Include="include\AsteroidComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
+    <ClInclude Include="include\AsteroidFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Transform.h">
+    <ClInclude Include="include\AsteroidSpawnerComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.h">
+    <ClInclude Include="include\BulletComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameObjectFactory.h">
+    <ClInclude Include="include\BulletFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="World.h">
+    <ClInclude Include="include\ColliderComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Screen.h">
+    <ClInclude Include="include\Component.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
+    <ClInclude Include="include\DamageDealerComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ShipComponent.h">
+    <ClInclude Include="include\GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ShipInput.h">
+    <ClInclude Include="include\GameObjectFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IShipDriver.h">
+    <ClInclude Include="include\Graphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Component.h">
+    <ClInclude Include="include\IDamageable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PhysicComponent.h">
+    <ClInclude Include="include\IShipDriver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Timer.h">
+    <ClInclude Include="include\ObjectPool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AsteroidSpawnerComponent.h">
+    <ClInclude Include="include\PhysicComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RenderComponent.h">
+    <ClInclude Include="include\Physics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AsteroidFactory.h">
+    <ClInclude Include="include\PoolObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Random.h">
+    <ClInclude Include="include\Random.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ColliderComponent.h">
+    <ClInclude Include="include\RenderComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IDamageable.h">
+    <ClInclude Include="include\Screen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DamageDealerComponent.h">
+    <ClInclude Include="include\ShipComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AsteroidComponent.h">
+    <ClInclude Include="include\ShipInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BulletComponent.h">
+    <ClInclude Include="include\ShipShooterComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectPool.h">
+    <ClInclude Include="include\Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PoolObject.h">
+    <ClInclude Include="include\Timer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BulletFactory.h">
+    <ClInclude Include="include\Transform.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ShipShooterComponent.h">
+    <ClInclude Include="include\Vector2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IDamageable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -208,5 +131,85 @@
     <Image Include="SPRITES\SHIELD.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\AsteroidComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AsteroidFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AsteroidSpawnerComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BulletComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BulletFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ColliderComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DamageDealerComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameObjectFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ObjectPool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PoolObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RenderComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ShipComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ShipInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ShipShooterComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Timer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Transform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vector2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -20,9 +20,9 @@ Vector2 Transform::GetScale() const
 	return m_size;
 }
 
-SDL_Rect Transform::GetRect() const
+SDL_FRect Transform::GetRect() const
 {
-	SDL_Rect rect;
+	SDL_FRect rect;
 	rect.x = m_position.x;
 	rect.y = m_position.y;
 	rect.w = m_size.x;
